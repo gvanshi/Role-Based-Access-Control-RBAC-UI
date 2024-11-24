@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "email": "alice@example.com",
+      "password": "admin123",
+      "role": "Admin",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "email": "bob@example.com",
+      "password": "editor123",
+      "role": "Editor"
+    },
+    {
+      "id": "3",
+      "name": "Jainii",
+      "email": "gvanshika233@gmaill.com",
+      "role": "Viewer",
+      "status": "Active",
+      "password": "awtm9493A@",
+      "confirmPassword": "awtm9493A@"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "permissions": [
+        "Read",
+        "Write"
+      ],
+      "roleName": "Admin"
+
+    },
+    {
+      "id": "2",
+      "name": "Editor",
+      "permissions": [
+        "Read",
+        "Write"
+      ],
+      "roleName": "Editor"
+
+    },
+    {
+      "id": "3",
+      "name": "Viewer",
+      "permissions": [
+        "Read"
+      ],
+      "roleName": "Viewer"
+
+    },
+
+    {
+      "id": "5",
+      "name": "ji",
+      "permissions": [
+        "Read"
+      ],
+      "roleName": "ji"
+
+    },
+    {
+      "id": "7",
+      "name": "Admin",
+      "permissions": [
+        "Read",
+        "Write"
+      ],
+      "roleName": "gva"
+    }
+  ],
+
+"permissions": [
+  {
+    "id": 1,
+    "name": "Read"
+  },
+  {
+    "id": 2,
+    "name": "Write"
+  },
+  {
+    "id": 3,
+    "name": "Delete"
+  }
+]
+}

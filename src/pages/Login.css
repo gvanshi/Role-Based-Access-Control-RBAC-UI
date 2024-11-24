@@ -1,0 +1,112 @@
+/* Global CSS */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Login Card */
+.login-card {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.6s ease;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.login-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Title and Subtitle */
+.login-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.login-input::placeholder {
+  color: #aaa;
+}
+
+/* Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.login-button.loading {
+  background: linear-gradient(90deg, #6c757d, #495057);
+  cursor: not-allowed;
+}
+
+.login-button:hover:not(.loading) {
+  background: linear-gradient(90deg, #0056b3, #003c75);
+  transform: translateY(-2px);
+}
+
+.login-button:active:not(.loading) {
+  transform: translateY(0);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

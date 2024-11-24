@@ -1,0 +1,199 @@
+.roles-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.6rem; /* Enhanced title font size */
+  margin-bottom: 20px;
+  font-weight: 600; /* Added boldness for prominence */
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.sort-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sort-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.add-role-button {
+  display: block;
+  margin-left: 10px;
+  padding: 10px 22px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-role-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.roles-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.roles-table th,
+.roles-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.roles-table th {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.roles-table td {
+  text-align: center;
+}
+
+.action-buttons button {
+  margin-right: 8px;
+  padding: 7px 15px;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #28a745;
+}
+
+.edit-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 450px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+fieldset {
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.cancel-button {
+  background-color: #dc3545;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}

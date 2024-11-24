@@ -1,0 +1,445 @@
+/* Center the container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Table Styling */
+.users-table {
+  width: 98%; /* Nearly full screen width */
+  max-width: 1200px; /* Limit maximum width */
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.users-table th,
+.users-table td {
+  border: 1px solid #ddd;
+  padding: 15px; /* Adjust padding for better alignment */
+  font-size: 18px; /* Font size for readability */
+}
+
+.users-table th {
+  background-color: #007bff;
+  color: white;
+  font-size: 21px;
+}
+
+.users-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.users-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Actions Column */
+.users-table th:nth-child(6), /* Select the "Actions" header */
+.users-table td:nth-child(6) { /* Select the "Actions" column cells */
+  width: 450px; /* Set a wider column width */
+}
+
+/* Buttons inside table */
+.users-table .action-buttons {
+  /* margin-right: 5px;
+  padding: 5px 10px; */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 10px; /* Add spacing between buttons */
+}
+
+
+.users-table .edit-button,
+.users-table .delete-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.users-table .edit-button {
+  background-color: #28a745; /* Green */
+  margin-left: 10px;
+}
+
+.users-table .edit-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.users-table .delete-button {
+  background-color: #dc3545; /* Red */
+}
+
+.users-table .delete-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+/* Container for Search, Filter, and Sort Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+/* Search Input */
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 5px #007bff;
+  border-color: #007bff;
+}
+
+/* Filter and Sort Dropdowns */
+.filter-select,
+.sort-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.filter-select:focus,
+.sort-select:focus {
+  box-shadow: 0 0 5px #007bff;
+  border-color: #007bff;
+}
+
+/* Hover effect for inputs and dropdowns */
+.filter-select:hover,
+.sort-select:hover,
+.search-input:hover {
+  border-color: #007bff;
+}
+
+/* Buttons for Adding or Managing Items */
+.add-user-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-user-button:hover {
+  background-color: #0056b3;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.filter-select, .sort-select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* Add New User Button */
+.add-user-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #007bff; /* Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Center the button */
+}
+
+.add-user-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Title Styling */
+h1 {
+  font-size: 2.5rem; /* Large title */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Center alignment for the whole page */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa; /* Light background */
+}
+
+/* Add spacing and center content */
+.page-content {
+  width: 100%;
+  max-width: 1300px; /* Increased max-width for better spacing */
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .users-table th,
+  .users-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .add-user-button {
+    width: 90%; /* Full-width button for smaller screens */
+    padding: 12px 25px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .users-table th,
+  .users-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .add-user-button {
+    width: 90%; /* Full-width button */
+    padding: 10px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Box */
+.modal {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Form Styling */
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.modal form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal form div label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.modal form div input,
+.modal form div select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Password Validation */
+.password-validation {
+  grid-column: span 2;
+  margin-top: 10px;
+}
+
+.password-validation span {
+  font-size: 14px;
+}
+
+.password-validation span.valid {
+  color: #28a745;
+}
+
+.password-validation span.invalid {
+  color: #dc3545;
+}
+
+/* Radio Group */
+.radio-group {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-buttons button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.modal-buttons button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.modal-buttons button[type="button"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modal-buttons button[type="button"]:hover {
+  background-color: #c82333;
+}
+
+/* Center the Table */
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.users-table {
+  width: 90%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.users-table th,
+.users-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.users-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.users-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.users-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.users-table button {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.users-table .edit-button {
+  background-color: #28a745;
+  color: white;
+
+}
+
+.users-table .edit-button:hover {
+  background-color: #218838;
+}
+
+.users-table .delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.users-table .delete-button:hover {
+  background-color: #c82333;
+}
+
+.users-container {
+  text-align: center;
+  padding: 20px;
+}

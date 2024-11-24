@@ -9,6 +9,9 @@ const Sidebar = ({ role }) => {
       { path: '/users', label: 'Users' },
       { path: '/roles', label: 'Roles' },
       { path: '/permissions', label: 'Permissions' },
+      { path: '/activity-logs', label: 'Activity Logs' }, // Add Activity Logs for Admins
+      { path: '/permission-matrix', label: 'Permissions Matrix' },
+
     ],
     Editor: [
       { path: '/roles', label: 'Roles' },

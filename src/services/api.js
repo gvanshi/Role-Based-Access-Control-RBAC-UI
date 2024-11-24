@@ -20,7 +20,7 @@ API.interceptors.request.use(
   }
 );
 
-// Interceptor for logging and error handling (optional)
+// Interceptor for logging and error handling
 API.interceptors.response.use(
   (response) => response,
   (error) => {
@@ -28,6 +28,42 @@ API.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
+//
+// Activity Logs API Methods
+//
+export const getActivityLogs = async () => {
+  try {
+    const response = await API.get('/activityLogs');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching activity logs:', error);
+    throw error;
+  }
+};
+
+export const addActivityLog = async (log) => {
+  try {
+    const response = await API.post('/activityLogs', log);
+    return response.data;
+  } catch (error) {
+    console.error('Error adding activity log:', error);
+    throw error;
+  }
+};
+
+export const logActivity = async (user, action) => {
+  try {
+    const log = {
+      user,
+      action,
+      timestamp: new Date().toISOString(),
+    };
+    await addActivityLog(log);
+  } catch (error) {
+    console.error('Error logging activity:', error);
+  }
+};
 
 //
 // User Management API Methods
@@ -42,9 +78,10 @@ export const getUsers = async () => {
   }
 };
 
-export const createUser = async (data) => {
+export const createUser = async (data, currentUser = 'Admin') => {
   try {
     const response = await API.post('/users', data);
+    await logActivity(currentUser, 'Added a new user');
     return response.data;
   } catch (error) {
     console.error('Error creating user:', error);
@@ -52,9 +89,10 @@ export const createUser = async (data) => {
   }
 };
 
-export const deleteUser = async (id) => {
+export const deleteUser = async (id, currentUser = 'Admin') => {
   try {
     const response = await API.delete(`/users/${id}`);
+    await logActivity(currentUser, `Deleted user with ID: ${id}`);
     return response.data;
   } catch (error) {
     console.error('Error deleting user:', error);
@@ -62,9 +100,10 @@ export const deleteUser = async (id) => {
   }
 };
 
-export const updateUser = async (id, data) => {
+export const updateUser = async (id, data, currentUser = 'Admin') => {
   try {
     const response = await API.put(`/users/${id}`, data);
+    await logActivity(currentUser, `Updated user with ID: ${id}`);
     return response.data;
   } catch (error) {
     console.error('Error updating user:', error);
@@ -85,9 +124,10 @@ export const getRoles = async () => {
   }
 };
 
-export const createRole = async (data) => {
+export const createRole = async (data, currentUser = 'Admin') => {
   try {
     const response = await API.post('/roles', data);
+    await logActivity(currentUser, `Created a new role: ${data.name}`);
     return response.data;
   } catch (error) {
     console.error('Error creating role:', error);
@@ -95,9 +135,10 @@ export const createRole = async (data) => {
   }
 };
 
-export const deleteRole = async (id) => {
+export const deleteRole = async (id, currentUser = 'Admin') => {
   try {
     const response = await API.delete(`/roles/${id}`);
+    await logActivity(currentUser, `Deleted role with ID: ${id}`);
     return response.data;
   } catch (error) {
     console.error('Error deleting role:', error);
@@ -105,9 +146,10 @@ export const deleteRole = async (id) => {
   }
 };
 
-export const updateRole = async (id, data) => {
+export const updateRole = async (id, data, currentUser = 'Admin') => {
   try {
     const response = await API.put(`/roles/${id}`, data);
+    await logActivity(currentUser, `Updated role with ID: ${id}`);
     return response.data;
   } catch (error) {
     console.error('Error updating role:', error);
@@ -128,9 +170,10 @@ export const getPermissions = async () => {
   }
 };
 
-export const createPermission = async (data) => {
+export const createPermission = async (data, currentUser = 'Admin') => {
   try {
     const response = await API.post('/permissions', data);
+    await logActivity(currentUser, `Created a new permission: ${data.name}`);
     return response.data;
   } catch (error) {
     console.error('Error creating permission:', error);
@@ -138,9 +181,10 @@ export const createPermission = async (data) => {
   }
 };
 
-export const deletePermission = async (id) => {
+export const deletePermission = async (id, currentUser = 'Admin') => {
   try {
     const response = await API.delete(`/permissions/${id}`);
+    await logActivity(currentUser, `Deleted permission with ID: ${id}`);
     return response.data;
   } catch (error) {
     console.error('Error deleting permission:', error);
@@ -148,16 +192,16 @@ export const deletePermission = async (id) => {
   }
 };
 
-export const updatePermission = async (id, data) => {
+export const updatePermission = async (id, data, currentUser = 'Admin') => {
   try {
     const response = await API.put(`/permissions/${id}`, data);
+    await logActivity(currentUser, `Updated permission with ID: ${id}`);
     return response.data;
   } catch (error) {
     console.error('Error updating permission:', error);
     throw error;
   }
 };
-
 
 // Export the configured Axios instance
 export default API;

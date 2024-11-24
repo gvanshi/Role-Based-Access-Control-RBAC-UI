@@ -1,0 +1,65 @@
+/* Container styling */
+.logs-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styling */
+  .logs-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Table styling */
+  .logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .logs-table th,
+  .logs-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .logs-table th {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .logs-table td {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .logs-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .logs-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Loading and error styling */
+  .logs-loading,
+  .logs-error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .logs-error {
+    color: red;
+  }
+  

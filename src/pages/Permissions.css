@@ -1,47 +1,75 @@
+/* Permissions Container */
 .permissions-container {
   max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #f3f3f3);
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Title */
 .title {
   text-align: center;
   color: #333;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Permissions Form */
 .permissions-form {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 10px; /* Ensure consistent spacing between input and button */
 }
 
 .form-input {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
+  font-size: 1rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
+.form-input:focus {
+  border: 1px solid #6e8efb;
+  box-shadow: 0 0 8px rgba(110, 142, 251, 0.4);
+  outline: none;
+}
+
+/* Add Button */
 .add-button {
-  background-color: #007bff;
+  background: linear-gradient(135deg, #007bff, #0056b3);
   color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .add-button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #0056b3, #004080);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
+.add-button:active {
+  background: linear-gradient(135deg, #003c75, #002d5a);
+  transform: translateY(0);
+}
+
+/* Permissions List */
 .permissions-list {
   list-style-type: none;
   padding: 0;
@@ -51,36 +79,88 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
+  background: #ffffff;
+  padding: 12px;
+  margin-bottom: 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
 }
 
+.permission-item:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Permission Name */
 .permission-name {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #333;
+  font-weight: bold;
 }
 
+/* Delete Button */
 .delete-button {
-  background-color: #dc3545;
+  background: linear-gradient(135deg, #dc3545, #b02a37);
   color: white;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .delete-button:hover {
-  background-color: #c82333;
+  background: linear-gradient(135deg, #b02a37, #8b202c);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
+.delete-button:active {
+  background: linear-gradient(135deg, #8b202c, #6f1923);
+  transform: translateY(0);
+}
+
+/* Loading and Error Styles */
 .loading {
   text-align: center;
   font-size: 1.2rem;
   color: #007bff;
+  animation: blink 1.5s infinite;
+}
+
+/* Edit Button */
+.edit-button {
+  background: linear-gradient(135deg, #56dc35, #78cc78);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button:hover {
+  background: linear-gradient(135deg, #2ab035, #208b37);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.edit-button:active {
+  background: linear-gradient(135deg, #208b40, #196f1f);
+  transform: translateY(0);
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .error {
@@ -88,4 +168,5 @@
   color: red;
   font-size: 1.2rem;
   margin-top: 20px;
+  font-weight: bold;
 }

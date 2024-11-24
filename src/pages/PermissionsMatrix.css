@@ -1,0 +1,27 @@
+.permission-matrix-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .permission-matrix {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .permission-matrix th,
+  .permission-matrix td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .permission-matrix th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .permission-matrix td input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+  

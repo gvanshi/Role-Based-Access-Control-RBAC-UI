@@ -173,8 +173,8 @@ This project is licensed under the **MIT License**. Feel free to use and modify 
 
 For any queries or feedback, please contact:
 
-- **Name**: G Vanshi
-- **Email**: your-email@example.com
+- **Name**: Vanshika Gupta
+- **Email**:gvanshika170@gmail.com
 - **GitHub**: [github.com/gvanshi](https://github.com/gvanshi)
 
 ---

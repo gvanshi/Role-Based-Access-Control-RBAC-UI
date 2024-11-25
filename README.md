@@ -19,25 +19,25 @@ Built using **React.js**, this project combines functionality, security, and a u
 - 🔄 **Role Assignment**: Assign specific roles to users, such as Admin, Editor, or Viewer.
 - ✅ **Status Management**: Activate or deactivate users as needed.
 - 🔍 **Search, Filter, and Sort**: Quickly locate users by name, email, role, or status.
-
+![alt text](image.png)
 ### **2️⃣ Role Management**
 - 🎭 **Define Custom Roles**: Create and modify roles tailored to your organizational needs.
 - ⚙️ **Assign Permissions**: Grant granular permissions (Read, Write, Delete) to each role.
-
+![alt text](image-1.png)
 ### **3️⃣ Permissions Management**
 - 🗝️ **Add or Remove Permissions**: Dynamically manage access rights.
 - 👀 **View Role Permissions**: Visualize which roles have specific permissions.
-
+![alt text](image-2.png)
 ### **4️⃣ Authentication**
 - 🔐 **Role-Specific Redirection**: Users are redirected to their designated dashboards based on their roles.
 - 🌈 **Modern Login UI**: Features a 3D-inspired login page with animations and real-time password strength validation.
-
+![alt text](image-3.png)
 ### **5️⃣ UI Enhancements**
 - 🌟 **Responsive Design**: Optimized for all devices, from desktops to smartphones.
 - 🎨 **Sleek Animations**: Subtle hover and focus effects for enhanced user experience.
 - 🖌️ **Gradient Backgrounds**: A modern, visually appealing interface.
 
----
+---![alt text](image-4.png)
 
 ## **🛠️ Technologies Used**
 
